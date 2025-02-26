@@ -75,27 +75,27 @@ class LatestTransactionCard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children:  [
-                          // if (controller.homeRepo.apiClient.getCurrencyOrUsername(isCurrency: false, isSymbol: false).toLowerCase() == transaction.receiverUser?.username?.toLowerCase()) ...[
+                          if (controller.homeRepo.apiClient.getCurrencyOrUsername(isCurrency: false, isSymbol: false).toLowerCase() == transaction.receiverUser?.username?.toLowerCase()) ...[
                            
                             Text(
-                              "${transaction.remark}".replaceAll("_", " ").toTitleCase().tr,
+                              "${transaction.payment_type}".replaceAll("_", " ").toTitleCase().tr,
                               style: regularDefault.copyWith(color: MyColor.getTextColor(), fontWeight: FontWeight.w500),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             ),
-                          // ] else ...[ 
-                          //   Text(
-                          //     "${transaction.remark}".replaceAll("_", " ").toTitleCase().tr,
-                          //     style: regularDefault.copyWith(color: MyColor.getTextColor(), fontWeight: FontWeight.w500),
-                          //     maxLines: 1,
-                          //     overflow: TextOverflow.ellipsis,
-                          //   ),
-                          // ],
+                          ] else ...[ 
+                            Text(
+                              "${transaction.payment_type}".replaceAll("_", " ").toTitleCase().tr,
+                              style: regularDefault.copyWith(color: MyColor.getTextColor(), fontWeight: FontWeight.w500),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
                           const SizedBox(height: Dimensions.space10),
                           SizedBox(
                             width: 150,
                             child: Text(
-                              transaction.trx.toString(),
+                              transaction.details.toString(),
                               style: regularSmall.copyWith(color: MyColor.getTextColor().withOpacity(0.5)),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,

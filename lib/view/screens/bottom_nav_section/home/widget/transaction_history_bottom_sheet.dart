@@ -76,8 +76,13 @@ class TransactionHistoryBottomSheet extends StatelessWidget {
               ),
             ],
           ),
-          // const SizedBox(height: Dimensions.space15),
-          // controller.latestTransactions[index].details == '' || controller.latestTransactions[index].details!.isEmpty ? const SizedBox.shrink() : Text(controller.latestTransactions[index].details ?? '')
+          const SizedBox(height: Dimensions.space15),
+            CardColumn(
+                alignmentEnd: false,
+                header: MyStrings.details.tr,
+                body: "${controller.latestTransactions[index].details == '' || controller.latestTransactions[index].details!.isEmpty ? const SizedBox.shrink() : controller.latestTransactions[index].details ?? ''} ",
+              ),
+          
         ],
       ),
     );

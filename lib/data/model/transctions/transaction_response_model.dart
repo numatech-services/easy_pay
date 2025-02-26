@@ -142,6 +142,7 @@ class Data {
     String? trx,
     String? details,
     String? remark,
+     String? payment_type,
     String? createdAt,
     String? updatedAt,
     String? apiDetails,
@@ -169,6 +170,7 @@ class Data {
     _trx = trx;
     _details = details;
     _remark = remark;
+     _payment_type = payment_type;
     _createdAt = createdAt;
     _updatedAt = updatedAt;
     _apiDetails = apiDetails;
@@ -199,6 +201,7 @@ class Data {
     _trx = json['trx'] != null ? json['trx'].toString() : '';
     _details = json['details'] != null ? json['details'].toString() : '';
     _remark = json['remark'] != null ? json['remark'].toString() : '';
+     _payment_type = json['payment_type'] != null ? json['payment_type'].toString() : '';
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
     _apiDetails = json['apiDetails'].toString();
@@ -226,6 +229,7 @@ class Data {
   String? _trx;
   String? _details;
   String? _remark;
+   String? _payment_type;
   String? _createdAt;
   String? _updatedAt;
   String? _apiDetails;
@@ -254,6 +258,7 @@ class Data {
   String? get trx => _trx;
   String? get details => _details;
   String? get remark => _remark;
+  String? get payment_type => _payment_type;
   String? get createdAt => _createdAt;
   String? get updatedAt => _updatedAt;
   String? get apiDetails => _apiDetails;
@@ -285,6 +290,7 @@ class Data {
     map['trx'] = _trx;
     map['details'] = _details;
     map['remark'] = _remark;
+     map['payment_type'] = _payment_type;
     map['created_at'] = _createdAt;
     map['updated_at'] = _updatedAt;
     map['apiDetails'] = _apiDetails;

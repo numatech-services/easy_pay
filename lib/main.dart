@@ -41,27 +41,6 @@ Future<void> main() async {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   HttpOverrides.global = MyHttpOverrides();
 
-    Get.locale = const Locale('fr', 'FR');
-  
-  Get.fallbackLocale = const Locale('en', 'US');
-
-  Get.addTranslations({
-   'fr_FR': {
-  'send_money': 'Envoi de d\'argent',
-  'cash_in': 'Dépôt d\'argent',
-  'Cash in to': 'Déposer sur',
-  'receive_money': 'Reception d\'argent',
-  'cash_out': 'Retrait d\'argent',
-},
-   'en_US': {
-  'send_money': 'Envoi de d\'argent',
-  'cash_in': 'Dépôt d\'argent',
-  'Cash in to': 'Déposer sur',
-  'receive_money': 'Reception d\'argent',
-  'cash_out': 'Retrait d\'argent',
-},
-
-  });
 
 
   runApp(MyApp(languages: languages));

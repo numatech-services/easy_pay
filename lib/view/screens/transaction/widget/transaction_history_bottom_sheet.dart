@@ -65,30 +65,30 @@ class TransactionHistoryBottomSheet extends StatelessWidget {
               ),
             ],
           ),
-          // const SizedBox(height: Dimensions.space15),
-          // controller.transactionList[index].remark!.contains("mobile")
-          //     ? CardColumn(
-          //         header: MyStrings.details.tr,
-          //         body: controller.transactionList[index].mobileRecharge?.adminFeedback ?? "--",
-          //         bodyMaxLine: 80,
-          //       )
-          //     : controller.transactionList[index].remark!.contains("bill")
-          //         ? CardColumn(
-          //             header: MyStrings.details.tr,
-          //             body: controller.transactionList[index].utilitybill?.adminFeedback ?? "",
-          //             bodyMaxLine: 80,
-          //           )
-          //         : controller.transactionList[index].remark!.contains("bank")
-          //             ? CardColumn(
-          //                 header: MyStrings.details.tr,
-          //                 body: controller.transactionList[index].details ?? "",
-          //                 bodyMaxLine: 80,
-          //               )
-          //             : CardColumn(
-          //                 header: MyStrings.details.tr,
-          //                 body: controller.transactionList[index].details ?? "",
-          //                 bodyMaxLine: 80,
-          //               ),
+          const SizedBox(height: Dimensions.space15),
+          controller.transactionList[index].remark!.contains("mobile")
+              ? CardColumn(
+                  header: MyStrings.details.tr,
+                  body: controller.transactionList[index].mobileRecharge?.adminFeedback ?? "--",
+                  bodyMaxLine: 80,
+                )
+              : controller.transactionList[index].remark!.contains("bill")
+                  ? CardColumn(
+                      header: MyStrings.details.tr,
+                      body: controller.transactionList[index].utilitybill?.adminFeedback ?? "",
+                      bodyMaxLine: 80,
+                    )
+                  : controller.transactionList[index].remark!.contains("bank")
+                      ? CardColumn(
+                          header: MyStrings.details.tr,
+                          body: controller.transactionList[index].details ?? "",
+                          bodyMaxLine: 80,
+                        )
+                      : CardColumn(
+                          header: MyStrings.details.tr,
+                          body: controller.transactionList[index].details ?? "",
+                          bodyMaxLine: 80,
+                        ),
         ],
       ),
     );

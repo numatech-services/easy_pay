@@ -194,6 +194,7 @@ class LatestTransaction {
   String? trx;
   String? details;
   String? remark;
+  String? payment_type;
   String? reference;
   String? hideIdentity;
   String? createdAt;
@@ -220,6 +221,7 @@ class LatestTransaction {
     this.trx,
     this.details,
     this.remark,
+    this.payment_type,
     this.reference,
     this.hideIdentity,
     this.createdAt,
@@ -248,6 +250,7 @@ class LatestTransaction {
         trx: json["trx"].toString(),
         details: json["details"].toString(),
         remark: json["remark"].toString(),
+        payment_type: json["payment_type"].toString(),
         reference: json["reference"].toString(),
         hideIdentity: json["hide_identity"].toString(),
         createdAt: json["created_at"] == null ? null : json["created_at"],
@@ -273,6 +276,7 @@ class LatestTransaction {
         "trx": trx,
         "details": details,
         "remark": remark,
+        "payment_type": payment_type,
         "reference": reference,
         "hide_identity": hideIdentity,
         "created_at": createdAt,
